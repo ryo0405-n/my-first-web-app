@@ -1,0 +1,121 @@
+/* ブラウザで設定されているスタイルのリセット・共通設定 */
+/* 消さないでください */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+/* スタイルのリセット終了 */
+
+/* サイドバーとメインコンテンツを包むための要素のスタイルを書いてください */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+/* サイドバーに関連するスタイルを書いてください */
+.sidebar {
+  width: 256px; /* サイドバーの幅を設定するのじゃ */
+  background-color: rgb(219, 219, 219); /* 背景色を少しグレーにするぞ */
+  border-right: 1px solid black; /* 右側に細い線を入れるのじゃ */
+  height: 100%; /* 親要素の高さに合わせるぞ */
+  display: flex; /* 中の要素を縦に並べるためにflexを使うのじゃ */
+  flex-direction: column; /* flexで縦方向に並べる指定じゃな */
+  flex-shrink: 0; /* サイドバーが縮まないようにするぞ */
+  position: sticky; /* ← これを追加するのじゃ！ */
+  top: 0; /* ← これも追加するのじゃ！ */
+  overflow-y: auto; /* ← これも追加するのじゃ！ */
+}
+
+.sidebar-header {
+  padding: 20px; /* 内側の余白を設定するのじゃ */
+  border-bottom: 1px solid black; /* 下に細い線を入れるぞ */
+}
+
+.sidebar-home {
+  font-size: 1.25rem; /* 文字の大きさを少し大きくするのじゃ */
+  font-weight: 600; /* 文字を太くするぞ */
+  color: #000000; /* 文字の色を設定するのじゃ */
+  display: flex; /* アイコンと文字を横に並べるためにflexを使うのじゃ */
+  align-items: center; /* アイコンと文字を中央揃えにするぞ */
+  gap: 8px; /* アイコンと文字の間に少し隙間を作るのじゃ */
+  text-decoration: none; /* リンクの下線を消すぞ */
+}
+/* メインコンテンツに関連するスタイルを書いてください */
+.main-content {
+  flex: 1; /* 残りのスペースを全て使うようにするぞ */
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* セクションヘッダー */
+.section-header {
+  background-color: #ffffff; /* 背景色を白にするのじゃ */
+  padding: 32px; /* 内側の余白を設定するぞ */
+  border-bottom: 1px solid #e0e0e0; /* 下に細い線を入れるのじゃ */
+  text-align: center; /* 文字を中央揃えにするぞ */
+}
+.section-title {
+  font-size: 1.5rem; /* 文字の大きさを設定するのじゃ */
+  font-weight: 600; /* 文字を太くするぞ */
+  color: #2f2f2f; /* 文字の色を設定するぞ */
+  margin-bottom: 8px; /* 下に余白を作るのじゃ */
+}
+.section-subtitle {
+  font-size: 1.125rem; /* 文字の大きさを設定するぞ */
+  color: #757575; /* 文字の色を少し薄くするのじゃ */
+  margin-bottom: 24px; /* 下に余白を作るぞ */
+}
+.section-description {
+  max-width: 672px; /* 最大幅を設定して、読みやすくするのじゃ */
+  margin: 0 auto; /* 左右の余白を自動にして中央に配置するぞ */
+  color: #757575; /* 文字の色を設定するのじゃ */
+  padding: 32px; /* 内側の余白を設定するぞ */
+}
+.section-description p {
+  margin-bottom: 16px; /* 段落の下に余白を作るぞ */
+}
+
+/* プロフィールサークル */
+.profile-circle {
+  width: 96px; /* 幅を設定するぞ */
+  height: 96px; /* 高さを設定するぞ */
+  background-color: #4f7cac; /* 背景色を設定するのじゃ */
+  border-radius: 50%; /* 角を丸くして円にするぞ */
+  display: flex; /* 中のアイコンを中央に配置するためにflexを使うのじゃ */
+  align-items: center; /* 縦方向の中央揃えじゃ */
+  justify-content: center; /* 横方向の中央揃えじゃ */
+  margin: 0 auto 24px; /* 上下の余白と、左右の自動余白で中央配置じゃ */
+}
+.profile-circle span {
+  font-size: 2.5rem; /* アイコンの大きさを設定するぞ */
+  color: #ffffff; /* アイコンの色を白にするのじゃ */
+}
+
+/* セクション本文 */
+.section-body {
+  padding: 32px; /* 内側の余白を設定するぞ */
+}
+
+
